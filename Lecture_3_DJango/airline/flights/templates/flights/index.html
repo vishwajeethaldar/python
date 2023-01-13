@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>
+            My Airline
+        </title>
+    </head>
+
+    <body>
+       <table>
+            <thead>
+                <tr>
+                    <th> Flight id </th>
+                    <th> Origin </th>
+                    <th> Destination </th>
+                    <th> Duration </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for flight in flights  %}
+                    <tr>
+                        <td> {{flight.id}} </td>
+                        <td> {{flight.origin.city}} </td>
+                        <td> {{flight.destination.city}} </td>
+                        <td> {{flight.duration}} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+       </table>
+    </body>
+
+</html>
