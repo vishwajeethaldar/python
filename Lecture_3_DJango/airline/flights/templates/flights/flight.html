@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>
+            My Airline
+        </title>
+    </head>
+
+    <body>
+      <h4>
+            <a href="{% url 'flights:index'%}">
+                Go Back
+            </a>
+      </h4>
+
+      <h2>Flight {{flight.id}}</h2>
+      <h2>{{flight.origin}}</h2>
+      <h2>{{flight.destination}}</h2>
+      <h2>{{flight.duration}}</h2>
+    </body>
+
+</html>

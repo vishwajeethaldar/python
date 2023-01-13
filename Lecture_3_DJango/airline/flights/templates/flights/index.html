@@ -18,13 +18,17 @@
             </thead>
 
             <tbody>
-                {% for flight in flights  %}
-                    <tr>
-                        <td> {{flight.id}} </td>
-                        <td> {{flight.origin.city}} </td>
-                        <td> {{flight.destination.city}} </td>
-                        <td> {{flight.duration}} </td>
-                    </tr>
+                {% for sflight in flightlist  %}
+                        <tr>
+                            <td> 
+                                <a href="{% url 'flights:flight' sflight.id %}">
+                                    {{sflight.id}}
+                                </a>
+                            </td>
+                            <td> {{sflight.origin.city}} </td>
+                            <td> {{sflight.destination.city}} </td>
+                            <td> {{sflight.duration}} </td>
+                        </tr>
                 {% endfor %}
             </tbody>
        </table>
